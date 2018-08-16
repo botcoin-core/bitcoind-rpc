@@ -1,26 +1,26 @@
-bitcoind-rpc.js
+botcoind-rpc.js
 ===============
 
-[![NPM Package](https://img.shields.io/npm/v/bitcoind-rpc.svg?style=flat-square)](https://www.npmjs.org/package/bitcoind-rpc)
-[![Build Status](https://img.shields.io/travis/bitpay/bitcoind-rpc.svg?branch=master&style=flat-square)](https://travis-ci.org/bitpay/bitcoind-rpc)
-[![Coverage Status](https://img.shields.io/coveralls/bitpay/bitcoind-rpc.svg?style=flat-square)](https://coveralls.io/r/bitpay/bitcoind-rpc?branch=master)
+[![NPM Package](https://img.shields.io/npm/v/botcoind-rpc.svg?style=flat-square)](https://www.npmjs.org/package/botcoind-rpc)
+[![Build Status](https://img.shields.io/travis/botcoin-core/botcoind-rpc.svg?branch=master&style=flat-square)](https://travis-ci.org/botcoin-core/botcoind-rpc)
+[![Coverage Status](https://img.shields.io/coveralls/botcoin-core/botcoind-rpc.svg?style=flat-square)](https://coveralls.io/r/botcoin-core/botcoind-rpc?branch=master)
 
 A client library to connect to Bitcoin Core RPC in JavaScript.
 
 ## Get Started
 
-bitcoind-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+botcoind-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install bitcoind-rpc
+npm install botcoind-rpc
 ```
 
 ## Examples
 
 ```javascript
 var run = function() {
-  var bitcore = require('bitcore');
-  var RpcClient = require('bitcoind-rpc');
+  var botcore = require('botcore');
+  var RpcClient = require('botcoind-rpc');
 
   var config = {
     protocol: 'http',
@@ -56,7 +56,7 @@ var run = function() {
         }
 
         rawtxs.map(function (rawtx) {
-          var tx = new bitcore.Transaction(rawtx.result);
+          var tx = new botcore.Transaction(rawtx.result);
           console.log('\n\n\n' + tx.id + ':', tx.toObject());
         });
 
@@ -72,6 +72,6 @@ var run = function() {
 
 ## License
 
-**Code released under [the MIT license](https://github.com/bitpay/bitcore/blob/master/LICENSE).**
+**Code released under [the MIT license](https://github.com/botcoin-core/botcore/blob/master/LICENSE).**
 
 Copyright 2013-2018 BitPay, Inc.
